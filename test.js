@@ -62,26 +62,52 @@
 
 // function kendaraan() {
 //     console.log(a)
-//     // if(true){
-//     //     let b = 'motor'
-//     //     b = 'sepeda'
-//     //     console.log(b)
-//     // }
+//      if(true){
+//          let b = 'motor'
+//          b = 'sepeda'
+//          console.log(b)
+//      }
 // }
 // kendaraan()
 
-var motor = 'ducati'
+// var motor = 'ducati'
 
 
-function kendaraan() {
+// function kendaraan() {
 
-    const pesawat = 'jet'
-    console.log(motor) //saya menggunakan var di taruh di bagian paling luar agar bisa dibaca oleh semua(global scope)
-    if (true) {
-        let sepeda = 'ontel'
-        console.log(sepeda) //saya menggunakan let agar hanya bisa dibaca oleh bagian if saja(block scope)
-        console.log(pesawat) //saya menggunakan const dan ditaruh di function kendaraan agar bisa dibaca di function kendaraan saja
+//     const pesawat = 'jet'
+//     console.log(motor) //saya menggunakan var di taruh di bagian paling luar agar bisa dibaca oleh semua(global scope)
+//     if (true) {
+//         let sepeda = 'ontel'
+//         console.log(sepeda) //saya menggunakan let agar hanya bisa dibaca oleh bagian if saja(block scope)
+//         console.log(pesawat) //saya menggunakan const dan ditaruh di function kendaraan agar bisa dibaca di function kendaraan saja
 
+//     }
+// }
+// kendaraan()
+
+//closure
+
+/**
+ * closure adalah sebuah cara mengakses variable dari parent scope di dalam cild scope parent
+ */
+
+// function hello(sapa) {
+
+//     var text = 'assalamualaikum ' + sapa
+//     return function() {
+//         console.log(text)
+//     }
+// }
+// var nama = hello('fulan')
+// nama()
+
+function Nama(name, kelas) {
+    var namkel = 'nama = ' + name + "\nkelas = " + kelas
+    return function () {
+        console.log(namkel)
     }
 }
-kendaraan()
+
+var b = Nama('Armand', '10rpla')
+b()
