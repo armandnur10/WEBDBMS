@@ -21,70 +21,69 @@
  * expression merupakan ekspresi js yang berfungsi untuk menghasilkan nilai tertentu
  */
 
-// let first = 1
-// let second = 2
-// let result = first + second
+let first = 1
+let second = 2
+let result = first + second
 
-// if(result > 4){
-//     console.log("maka dia akan tampil")
-// }else{
-//     console.log("hasilnya adalah " + result)
-// }
+if(result > 4){
+    console.log("maka dia akan tampil")
+}else{
+    console.log("hasilnya adalah " + result)
+}
 
 //scope
 /**
  * cakupan kode agar bisa mengakses atau membatasi
  */
 
-//global scope
-/**
- * global scope merupakan cakupan di seluruh file
- */
-// console.log(c)
-// var a = "hallo"
+// global scope
+//  * global scope merupakan cakupan di seluruh file
 
-// function first (){
-//     if(true){
-//         var b = 'hello'
-//     }
-//     console.log(b)
-//     console.log(a)
-// }
+console.log(c)
+var a = "hallo"
 
-// function second (){
-//      a = "bedul"
-//      console.log(a)
-// }
-// first()
-// second()
+function first (){
+    if(true){
+        var b = 'hello'
+    }
+    console.log(b)
+    console.log(a)
+}
 
-// const a = 'mobil'
+function second (){
+     a = "bedul"
+     console.log(a)
+}
+first()
+second()
 
-// function kendaraan() {
-//     console.log(a)
-//      if(true){
-//          let b = 'motor'
-//          b = 'sepeda'
-//          console.log(b)
-//      }
-// }
-// kendaraan()
+const a = 'mobil'
 
-// var motor = 'ducati'
+function kendaraan() {
+    console.log(a)
+     if(true){
+         let b = 'motor'
+         b = 'sepeda'
+         console.log(b)
+     }
+}
+kendaraan()
+
+var motor = 'ducati'
 
 
-// function kendaraan() {
+function kendaraan() {
 
-//     const pesawat = 'jet'
-//     console.log(motor) //saya menggunakan var di taruh di bagian paling luar agar bisa dibaca oleh semua(global scope)
-//     if (true) {
-//         let sepeda = 'ontel'
-//         console.log(sepeda) //saya menggunakan let agar hanya bisa dibaca oleh bagian if saja(block scope)
-//         console.log(pesawat) //saya menggunakan const dan ditaruh di function kendaraan agar bisa dibaca di function kendaraan saja
+    const pesawat = 'jet'
+    console.log(motor) //saya menggunakan var di taruh di bagian paling luar agar bisa dibaca oleh semua(global scope)
+    if (true) {
+        let sepeda = 'ontel'
+        console.log(sepeda) //saya menggunakan let agar hanya bisa dibaca oleh bagian if saja(block scope)
+        console.log(pesawat) //saya menggunakan const dan ditaruh di function kendaraan agar bisa dibaca di function kendaraan saja
 
-//     }
-// }
-// kendaraan()
+    }
+}
+kendaraan()
 
 //closure
 
@@ -92,15 +91,15 @@
  * closure adalah sebuah cara mengakses variable dari parent scope di dalam cild scope parent
  */
 
-// function hello(sapa) {
+function hello(sapa) {
 
-//     var text = 'assalamualaikum ' + sapa
-//     return function() {
-//         console.log(text)
-//     }
-// }
-// var nama = hello('fulan')
-// nama()
+    var text = 'assalamualaikum ' + sapa
+    return function() {
+        console.log(text)
+    }
+}
+var nama = hello('fulan')
+nama()
 
 function Nama(name, kelas) {
     var namkel = 'nama = ' + name + "\nkelas = " + kelas
